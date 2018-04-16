@@ -15,12 +15,12 @@ module.exports = {
     ],
   },
   output: {
-    filename: 'main.js',
+    filename: 'main.[chunkhash].js',
     path: path.resolve(__dirname, 'dist')
   },
    plugins: [
     new MiniCssExtractPlugin({
-      filename: "[name].css",
+      filename: "[name].[chunkhash].css",
     }),
   ],
 };
