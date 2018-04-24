@@ -13,15 +13,21 @@ const SCOUT_FOOT = [
   '  ];',
   '  var scoutEl = document.getElementById(\'scout\');',
   '  var baseUrl = scoutEl.dataset.baseUrl;',
-  '  loadjs(ASSETS, {',
+  '  var assets = ASSETS.map(appendBaseUrl);',
+  '  loadjs(assets, {',
   '    success: handleSuccess,',
   '    async: false,',
   '  });',
+  '',
+  '  function appendBaseUrl(asset) {',
+  '    return baseUrl + asset;',
+  '  }',
   '',
   '  function handleSuccess() {',
   '    window.renderApplication();',
   '  }',
   '})();',
+  '',
 ];
 const CHUNK_SORT_ORDER = 'auto';
 
