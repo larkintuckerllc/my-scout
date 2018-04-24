@@ -13,8 +13,6 @@ const SCOUT_FOOT = [
   '  ];',
   '  var scoutEl = document.getElementById(\'scout\');',
   '  var baseUrl = scoutEl.dataset.baseUrl;',
-  '  var style = baseUrl + STYLE;',
-  '  var script = baseUrl + SCRIPT;',
   '  loadjs(ASSETS, {',
   '    success: handleSuccess,',
   '    async: false,',
