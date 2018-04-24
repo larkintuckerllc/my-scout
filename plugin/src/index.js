@@ -1,7 +1,8 @@
 import 'babel-polyfill';
 import './index.css';
 
-__webpack_public_path__ = window.publicPath;
+const scoutEl = document.getElementById('scout');
+__webpack_public_path__ = scoutEl.dataset.baseUrl;
 window.renderApplication = () => {
   const rootEl = document.getElementById('root');
   const catButtonEl = document.createElement('button');
